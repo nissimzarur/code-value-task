@@ -1,12 +1,9 @@
 import { Box, Text } from "@components/base";
 import ProductCard from "./product-card/product-card.component";
 import { observer } from "mobx-react-lite";
-import { useContext } from "react";
-import { FilterProductsContext } from "../context/filter-products.context";
 import { IProduct } from "@utils/global.interfaces";
 
 const ProductsList = observer(({paginateProducts}:{paginateProducts:IProduct[]}) => {
-  // const { filteredProducts: products } = useContext(FilterProductsContext);
 
   if (!paginateProducts.length)
     return (

@@ -6,5 +6,5 @@ export const FilterProductsContext = React.createContext<{
   setFilteredfProducts: (text: string) => void;
 }>({
   filteredProducts: [],
-  setFilteredfProducts: (text: string) => {},
+  setFilteredfProducts: () => {},
 });
