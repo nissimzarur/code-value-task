@@ -23,27 +23,6 @@ export class ProductsStore {
     makeAutoObservable(this);
   }
 
-  private arrayToChunks() {
-    const array: IProduct[] = localStorage.getItem("products")
-      ? JSON.parse(localStorage.getItem("products") || "")
-      : [
-          {
-            creationDate: "",
-            name: "",
-            description: "",
-            id: 123,
-            image: "",
-            price: 300,
-          },
-        ];
-    const chunkSize = 3;
-    const chunks = [];
-    for (let i = 0; i < array.length; i += chunkSize) {
-      chunks.push(array.slice(i, i + chunkSize));
-    }
-    return chunks;
-  }
-
   add(product: IProduct): void {
     runInAction(() => {
       this.products.push(product);
