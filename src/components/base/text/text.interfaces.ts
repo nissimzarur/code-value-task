@@ -1,0 +1,1 @@
+export default interface IText extends React.HTMLProps<HTMLSpanElement>{}

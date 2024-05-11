@@ -1,22 +1,22 @@
-import { Layout } from "@components/customized";
-import { AuthPage, ErrorPage, HomePage } from "@pages/index";
-import { createBrowserRouter } from "react-router-dom";
+import { AppLayout } from "@components/customized";
+import { ErrorPage, HomePage } from "@pages/index";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 
 export const routes = {
-  home: "/home",
-  auth: "/auth",
+  root:'/',
+  products: "/products/*",
   error: "/error",
 };
 
 export const appRouter = createBrowserRouter([
   {
-    path: "*",
-    element: <AuthPage />,
+    path: routes.root,
+    element:<Navigate to="/products" />
   },
   {
-    element: <Layout />,
+    element: <AppLayout />,
     children: [
-      { path: routes.home, element: <HomePage /> },
+      { path: routes.products, element: <HomePage />  },
       { path: routes.error, element: <ErrorPage /> },
     ],
   },

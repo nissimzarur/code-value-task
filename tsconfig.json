@@ -31,6 +31,8 @@
       "@api/*": ["./api/*"],
       "@services/*": ["./services/*"],
       "@navigation/*": ["./navigation/*"],
+      "@utils/*": ["./utils/*"],
+      "@products/*": ["./assets/products/*"],
     },
   },
   "include": ["src"],

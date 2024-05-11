@@ -1,4 +1,4 @@
-import INotification from "@components/base/notification/notification.interfaces";
+import INotification from "@components/customized/notification/notification.interfaces";
 import { makeAutoObservable, runInAction } from "mobx";
 
 export class AppStore {
